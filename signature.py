@@ -23,6 +23,8 @@ def crop(path):
     total_area = 0
     counter = 0
     average = 0.0
+
+    
     for region in regionprops(blobs_labels):
         if (region.area > 10):
             total_area = total_area + region.area
