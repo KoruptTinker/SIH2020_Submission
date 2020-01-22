@@ -256,7 +256,7 @@ def crop(path):
         crop = find_optimal_components_subset(contours, edges)
         crop = pad_crop(crop, contours, edges, border_contour)
 
-        crop = [int(x / scale) for x in crop]  # upscale to the original image size.
+        crop = [int(x / scale) for x in crop]  
         text_im = orig_im.crop(crop)
         text_im.save(out_path)
     process_image(path,out_path)
