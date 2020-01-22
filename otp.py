@@ -1,7 +1,6 @@
 otp=""
 def send_message(number):   
     global otp 
-    import os
     from twilio.rest import Client
 
     account_sid="AC208fd81769b08cd5c4489033f6726d4b"
