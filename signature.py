@@ -1,5 +1,6 @@
 path='./test.jpg'
-out_path="./output.png"
+out_path="./output.jpg"
+inter_path="./output_inter.jpg"
 def crop(path):
     import cv2
     import matplotlib.pyplot as plt
@@ -45,7 +46,7 @@ def crop(path):
     img = cv2.imread('pre_version.png', 0)
     img = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
-    cv2.imwrite('D:\signature_extractor-master\sample_project\\test.jpg', img)
+    cv2.imwrite(inter_path, img)
 
     def dilate(ary, N, iterations):
 
@@ -225,7 +226,7 @@ def crop(path):
 
     def process_image(path, out_path):
 
-        orig_im = Image.open(path)
+        orig_im = Image.open(inter_path)
         scale, im = downscale_image(orig_im)
 
         edges = cv2.Canny(np.asarray(im), 100, 200)
