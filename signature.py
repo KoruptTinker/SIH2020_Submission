@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 path=''
 out_path=""
 inter_path=""
-=======
-path='./test.jpg'
-out_path="./output..jpg"
-inter_path="./temp.jpg"
->>>>>>> Added FIR generator
 def crop(path):
     import cv2
     import matplotlib.pyplot as plt
@@ -266,7 +260,3 @@ def crop(path):
         text_im = orig_im.crop(crop)
         text_im.save(out_path)
     process_image(path,out_path)
-<<<<<<< HEAD
-=======
-crop(path)
->>>>>>> Added FIR generator
